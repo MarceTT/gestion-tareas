@@ -43,4 +43,14 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    /**
+     * Get all of the tareas for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+
+    public function tareas(){
+        return $this->hasMany(Tareas::class);
+    }
+
 }
